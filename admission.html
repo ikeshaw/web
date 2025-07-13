@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admission Form | Aryan Classes</title>
+  <link rel="stylesheet" href="style4.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Campus</a>
+    <a href="timetable.html">Routine</a>
+    <a href="mailto:aryanclasses@gmail.com">Contact&nbsp;Us</a>
+    <a href="tel:+918210569595">Call&nbsp;Now</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="top">
+    <img src="logo.jpeg" alt="Aryan Classes Logo" />
+    <h1>ARYAN CLASSES</h1>
+  </header>
+
+  <!-- Main Admission Form -->
+  <main class="maincon">
+    <form id="admissionForm" action="https://formspree.io/f/your-endpoint" method="POST">
+      <h2>Admission Application Form</h2>
+
+      <label for="studentName">Student Name</label>
+      <input type="text" id="studentName" name="studentName" required />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required />
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="" disabled selected>Select…</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label for="fatherName">Father’s Name</label>
+      <input type="text" id="fatherName" name="fatherName" required />
+
+      <label for="motherName">Mother’s Name</label>
+      <input type="text" id="motherName" name="motherName" />
+
+      <label for="address">Full Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="email">Email ID</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Mobile Number</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number" required />
+
+      <label for="classApply">Class Applying For</label>
+      <select id="classApply" name="classApply" required>
+        <option value="" disabled selected>Select…</option>
+        <option>LKG</option>
+        <option>UKG</option>
+        <option>Class 1</option>
+        <option>Class 2</option>
+        <option>Class 3</option>
+      </select>
+
+      <label class="declaration">
+        <input type="checkbox" name="declaration" required />
+        I hereby declare that the information provided is true and correct.
+      </label>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="foot">
+    <p>&copy; 2025 Aryan Classes. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
