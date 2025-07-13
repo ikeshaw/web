@@ -16,12 +16,12 @@
 }
 
 body {
-  font-family: "Times New Roman", Georgia, serif; /* traditional credibility */
+  font-family: "Times New Roman", Georgia, serif;
   background: var(--bg-light);
   color: #333;
   line-height: 1.55;
   scroll-behavior: smooth;
-  animation: body-fade 0.6s ease-out; /* entrance */
+  animation: body-fade 0.6s ease-out;
 }
 
 @keyframes body-fade {
@@ -64,7 +64,7 @@ body {
 }
 
 .nav a:hover::before {
-  transform: translateY(0);   /* wash-down shimmer */
+  transform: translateY(0);
 }
 
 /* ---------- 2. Hero / Top ---------- */
@@ -109,88 +109,105 @@ body {
   border-radius: 3px;
 }
 
-
-/* Tables */
+/* ---------- 3. Table Section ---------- */
 .rout {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    animation: fadeInContent 1.5s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  animation: fadeInContent 1.5s ease;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s;
 }
 
 table:hover {
-    transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 caption {
-    font-size: 1.5rem;
-    color: var(--brand-dark);
-    margin-bottom: 10px;
-    font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--brand-dark);
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 th, td {
-    padding: 15px;
-    text-align: center;
-    border: 1px solid #ccc;
-    transition: background-color 0.3s;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s;
 }
 
 th {
-    background-color: #e6f2ff;
+  background-color: #e6f2ff;
 }
 
 td:hover {
-    background-color: #d1e7ff;
+  background-color: #d1e7ff;
 }
 
-/* Footer */
+/* ---------- 4. Footer ---------- */
 footer {
-    background-color: var(--brand-dark);
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 1rem;
-    animation: fadeInFooter 2s ease;
+  background-color: var(--brand-dark);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 1rem;
+  animation: fadeInFooter 2s ease;
 }
 
-/* Animations */
+/* ---------- 5. Animations ---------- */
 @keyframes fadeInBody {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideInTop {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInTitle {
-    0% { opacity: 0; transform: scale(0.8); }
-    100% { opacity: 1; transform: scale(1); }
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 @keyframes fadeInContent {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInFooter {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---------- 6. Responsive Table Fix ---------- */
+.rout table {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  min-width: 600px;
+}
+
+@media (max-width: 600px) {
+  th, td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
 }
